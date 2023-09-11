@@ -1,0 +1,26 @@
+#slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Volledige viewporthoogte */
+    overflow: hidden;
+}
+
+#slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Behoudt de beeldverhouding en bedekt de volledige beschikbare ruimte */
+}
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+}
+
+body{
+    margin: 0;
+}
