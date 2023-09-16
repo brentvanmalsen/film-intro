@@ -13,6 +13,11 @@ for (let i = 1; i <= numberOfImages; i++) {
     imageArray.push(img);
 }
 
+const blackScreen = new Image();
+blackScreen.src = "images/black_screen.png";
+blackScreen.alt = "Black Screen";
+blackScreen.style.opacity = 0; // Begin met een doorzichtige zwarte afbeelding
+
 let currentIndex = 0;
 let animationStartTime = null;
 
@@ -26,16 +31,34 @@ function nextImage(timestamp) {
 
     currentIndex = Math.floor(progress * numberOfImages);
 
-    const img = imageArray[currentIndex];
+    if (currentIndex === numberOfImages) {
+        // Laatste afbeelding bereikt, toon de zwarte afbeelding
+        slideshow.innerHTML = '';
+        slideshow.appendChild(blackScreen);
+        fadeBlackScreenIn();
+    } else {
+        const img = imageArray[currentIndex];
+        img.style.transform = `scale(${initialScale - (initialScale - finalScale) * progress})`;
 
-    img.style.transform = `scale(${initialScale - (initialScale - finalScale) * progress})`;
+        slideshow.innerHTML = '';
+        slideshow.appendChild(img);
 
-    slideshow.innerHTML = '';
-    slideshow.appendChild(img);
-
-    if (progress < 1) {
-        requestAnimationFrame(nextImage);
+        if (progress < 1) {
+            requestAnimationFrame(nextImage);
+        }
     }
+}
+
+function fadeBlackScreenIn() {
+    let opacity = 0;
+    const fadeInInterval = setInterval(() => {
+        opacity += 0.01;
+        blackScreen.style.opacity = opacity;
+
+        if (opacity >= 1) {
+            clearInterval(fadeInInterval);
+        }
+    }, 20); // Elke 20 milliseconden de opacity aanpassen voor een fade-in effect
 }
 
 requestAnimationFrame(nextImage);
