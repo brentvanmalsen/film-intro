@@ -5,8 +5,12 @@ const animationDuration = 8000; // Totaal duur van de animatie in milliseconden 
 const initialScale = 2.0; // Begin met een grotere schaal (inzoomen)
 const finalScale = 1.0; // Schaal voor de laatste afbeelding (origineel formaat)
 
+// Vooraf laden van afbeeldingen
 for (let i = 1; i <= numberOfImages; i++) {
-    imageArray.push(`images/comic${i}.png`);
+    const img = new Image();
+    img.src = `images/comic${i}.png`;
+    img.alt = `Afbeelding ${i}`;
+    imageArray.push(img);
 }
 
 let currentIndex = 0;
@@ -22,9 +26,7 @@ function nextImage(timestamp) {
 
     currentIndex = Math.floor(progress * numberOfImages);
 
-    const img = new Image();
-    img.src = imageArray[currentIndex];
-    img.alt = `Afbeelding ${currentIndex + 1}`;
+    const img = imageArray[currentIndex];
 
     img.style.transform = `scale(${initialScale - (initialScale - finalScale) * progress})`;
 
