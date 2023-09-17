@@ -5,6 +5,24 @@ const animationDuration = 8000; // Totaal duur van de animatie in milliseconden 
 const initialScale = 2.0; // Begin met een grotere schaal (inzoomen)
 const finalScale = 1.0; // Schaal voor de laatste afbeelding (origineel formaat)
 
+const audio = new Audio('./images/marvel_song.mp3');
+
+// Ensure the audio is loaded before playing
+audio.addEventListener('canplaythrough', function () {
+  audio.play();
+});
+
+// Handle errors
+audio.addEventListener('error', function (e) {
+  console.error('Audio error:', e);
+});
+
+// You can also use a setTimeout to play the audio after a delay
+// setTimeout(() => {
+//   audio.play();
+// }, 10000); // Play after 10 seconds
+
+
 // Vooraf laden van afbeeldingen
 for (let i = 1; i <= numberOfImages; i++) {
     const img = new Image();
