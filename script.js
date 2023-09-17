@@ -62,3 +62,9 @@ function fadeBlackScreenIn() {
 }
 
 requestAnimationFrame(nextImage);
+
+window.addEventListener("load", function() {
+    setTimeout(function() {
+        document.getElementById("marvel-logo").classList.remove("hidden");
+    }, 7000); // 10 seconden
+});

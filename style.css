@@ -1,7 +1,7 @@
 #slideshow {
     position: relative;
     width: 100%;
-    height: 100vh; /* Volledige viewporthoogte */
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -9,18 +9,45 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Behoudt de beeldverhouding en bedekt de volledige beschikbare ruimte */
+    object-fit: cover;
 }
 
 @keyframes fade {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0;
     }
-    10%, 90% {
+
+    10%,
+    90% {
         opacity: 1;
     }
 }
 
-body{
+body {
     margin: 0;
+    overflow: hidden;
+    background-image: url('images/comic35.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#marvel-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hidden {
+    display: none;
+}
+
+#marvel-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.2); /* Pas de schaal aan zoals gewenst */
 }
