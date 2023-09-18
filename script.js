@@ -70,3 +70,7 @@ window.addEventListener("load", function () {
         document.getElementById("marvel-logo").classList.remove("hidden");
     }, 7000); // 7 seconden
 });
+
+setTimeout (function () {
+    location.replace("./index.html")
+}, 15000)
