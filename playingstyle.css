@@ -49,5 +49,6 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.2); /* Pas de schaal aan zoals gewenst */
+    transform: translate(-50%, -50%) scale(0.2);
 }
+    
