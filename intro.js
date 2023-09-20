@@ -72,5 +72,5 @@ window.addEventListener("load", function () {
 });
 
 setTimeout (function () {
-    location.replace("../voorpagina/voorpagina.html")
+    location.replace("../voorpagina.html")
 }, 15000)
