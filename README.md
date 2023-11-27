@@ -5,12 +5,12 @@ Dit project is een uitdaging waarbij de intro van een Marvel-film wordt nageboot
 ## Instructies
 
 1. **Clone de repository:**
-   git clone [https://git.fhict.nl/I507960/challenge-2-vliegend-object.git
+   git clone [https://git.fhict.nl/I507960/challenge-1-film-intro.git]
 
-2. Open de HTML-pagina:
+2. **Open de HTML-pagina:**
    Open het index.html-bestand in je favoriete webbrowser.
 
-3. Bekijk de Marvel Intro:
+3. **Bekijk de Marvel Intro:**
    Geniet van de Marvel-achtige intro die is gemaakt met behulp van afbeeldingen, animaties en geluidseffecten.
 
 ## Structuur van de repository
