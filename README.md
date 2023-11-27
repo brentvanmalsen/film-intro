@@ -15,19 +15,15 @@ Dit project is een uitdaging waarbij de intro van een Marvel-film wordt nageboot
 
 ## Structuur van de repository
 
-index.html: 
-De hoofdpagina van het project die de structuur van de webpagina bevat. <br><br>
-intro.css: 
-De CSS-stijlen die verantwoordelijk zijn voor de opmaak en lay-out van de pagina. <br><br>
-intro.js: 
-De JavaScript-code die de logica achter de intro-animatie en interacties beheert. <br><br>
-images/: 
-Een map die alle afbeeldingen bevat die worden gebruikt in de intro. <br><br>
+- index.html: De hoofdpagina van het project die de structuur van de webpagina bevat.
+- intro.css: De CSS-stijlen die verantwoordelijk zijn voor de opmaak en lay-out van de pagina.
+- intro.js: De JavaScript-code die de logica achter de intro-animatie en interacties beheert.
+- images/: Een map die alle afbeeldingen bevat die worden gebruikt in de intro.
 
 ## Vereisten
 
-Moderne webbrowser (bijv. Chrome, Firefox, Safari)
-Internetverbinding (voor het laden van externe bronnen zoals geluid)
+- Moderne webbrowser (bijv. Chrome, Firefox, Safari)
+- Internetverbinding (voor het laden van externe bronnen zoals geluid)
 
 ## Opmerkingen
 
