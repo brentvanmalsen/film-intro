@@ -89,7 +89,7 @@ window.addEventListener("load", function () {
     }, 7000); // 7 seconden
 });
 
-// Na 15 seconden, vervang de huidige pagina door index.html test
+// Na 15 seconden, vervang de huidige pagina door index.html
 setTimeout(function () {
     location.replace("../index.html")
 }, 15000);
